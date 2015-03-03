@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<link rel="stylesheet" href="">
+	</head>
+	<body>
+		<!-- <script src="http://autobahn.s3.amazonaws.com/js/autobahn.min.js"></script> -->
+		<script>
+		var conn = new WebSocket('ws://10.0.36.90:8080');
+		conn.onopen = function(e) {
+		console.log("Connection established!");
+		};
+		conn.onmessage = function(e) {
+		console.log(e.data);
+		};
+		</script>
+	</body>
+</html>
